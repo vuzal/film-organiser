@@ -7,7 +7,6 @@ import './App.css';
 
 export default function App() {
   return (
-    <BrowserRouter basename="film-organiser">
       <div className="app-container">
         <header className="app-header">
           <Link to="/" className="logo-link">
@@ -26,6 +25,5 @@ export default function App() {
           </Routes>
         </main>
       </div>
-    </BrowserRouter>
   );
 }
