@@ -1,0 +1,83 @@
+.favorites-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.list-name-input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  outline: none;
+}
+
+.save-list-btn:disabled {
+  background-color: #ced4da;
+  color: #6c757d;
+  cursor: not-allowed;
+}
+
+.favorites-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.favorites-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  color: #333333;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  color: #dc3545;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.remove-btn:hover {
+  background-color: #f6c4c4;
+}
+
+.favorites-action {
+  margin-top: 10px;
+}
+
+.save-list-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.save-list-btn:hover{
+  background-color: #0056b3;
+}
+
+.save-list-btn:disabled {
+  background-color: #ced4da;
+  cursor: not-allowed;
+}

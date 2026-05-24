@@ -1,0 +1,70 @@
+.my-lists-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.my-lists-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #1a252f;
+}
+
+.no-lists {
+  text-align: center;
+  color: #6c757d;
+}
+
+.lists-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.list-folder-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+.folder-info h3 {
+  margin: 0 0 5px 0;
+  color: #007bff;
+  font-size: 18px;
+}
+
+.folder-info p {
+  margin: 0;
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.folder-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.view-list-link {
+  text-decoration: none;
+  background-color: #28a745;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.delete-list-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+}

@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f6f9;
+  color: #333;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-header {
+  background-color: #111b24; 
+  padding: 20px 40px;
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+}
+.logo-link {
+  text-decoration: none !important;
+}
+
+.app-header h1 {
+  font-size: 28px; 
+  font-weight: 800;
+  color: #ffffff !important;
+}
+.logo-link:hover h1 {
+  color: #ffd166 !important;
+}
+
+
+.my-lists-btn {
+  color: #ffffff;
+  text-decoration: none !important; 
+  font-weight: 600;
+  font-size: 15px;
+  background-color: #1e2d3b; 
+  padding: 10px 20px;
+  border-radius: 20px; 
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+}
+.my-lists-btn:hover {
+  background-color: #ffd166; 
+  color: #111b24;
+}
+
+.app-content {
+  flex: 1;
+  width: 100%;
+}
+
+@media (max-width: 576px) {
+  .app-header {
+    padding: 15px 20px;
+    flex-direction: column; 
+    gap: 12px;
+  }
+
+  .app-header h1 {
+    font-size: 22px;
+  }
+
+  .my-lists-btn {
+    width: 100%; 
+    justify-content: center;
+    padding: 8px 16px;
+  }
+}
