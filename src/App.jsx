@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, BrowserRouter } from 'react-router-dom';
 import Home from "./pages/Home";
 import ListPage from "./pages/ListPage";
 import MyList from "./pages/MyList";
@@ -7,7 +7,7 @@ import './App.css';
 
 export default function App() {
   return (
-    <Router>
+    <BrowserRouter basename="film-organiser">
       <div className="app-container">
         <header className="app-header">
           <Link to="/" className="logo-link">
@@ -26,6 +26,6 @@ export default function App() {
           </Routes>
         </main>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
