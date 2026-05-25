@@ -9,7 +9,7 @@ export default function ListPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
-  const API_KEY = "9374cc3b"
+  const API_KEY = import.meta.env.VITE_OMDB_API_KEY;
   useEffect(() => {
     setLoading(true);
     setError('');

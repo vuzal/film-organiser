@@ -10,7 +10,7 @@ export default function Home() {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
 
-    const API_KEY ="9374cc3b"
+    const API_KEY = import.meta.env.VITE_OMDB_API_KEY;
     function handleSearch(searchedMovie) {
         setLoading(true);
         setError('');
