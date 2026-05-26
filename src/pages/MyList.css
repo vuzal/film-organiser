@@ -47,6 +47,7 @@
   font-weight: 700;
   color: #000000;
   margin-bottom: 16px;
+  overflow-wrap: anywhere;
 }
 .movies-in-list {
   display: flex;

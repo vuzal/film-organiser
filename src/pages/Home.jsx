@@ -25,7 +25,7 @@ export default function Home() {
     }
 
     useEffect(() => {
-        handleSearch('car');
+        handleSearch('gun');
     }, []);
 
     function handleAddToFavorites(movie) {
