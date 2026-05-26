@@ -1,27 +1,126 @@
-.home-page{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+.home-page {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
+
+.home-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
 .main-content {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
+}
+
+.movies-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.movie-card {
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff;
+  border: 1px solid #6804e1;
+  border-bottom: none;
+}
+
+.movie-poster {
+  width: 120px;
+  height: 180px;
+}
+
+.movie-info {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 20px;
+  gap: 8px;
+  justify-content: center;
+}
+
+.movie-info h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #212529;
+  font-weight: 700;
+}
+
+.movie-info p {
+  margin: 0;
+  color: #555;
+  font-size: 14px;
+}
+
+.add-to-fav-btn {
+  width: fit-content;
+  padding: 8px 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #7b2fbe;
+  color: #ffffff;
+}
+
+.add-to-fav-btn:hover {
+  background-color: #5a1a9a;
+}
+
+.add-to-fav-btn:disabled {
+  background-color: #ced4da;
+  color: #6c757d;
+  cursor: not-allowed;
 }
 
 .sidebar-content {
   background-color: #f8f9fa;
   padding: 15px;
   border-radius: 8px;
-  border: 1px solid rgb(79, 104, 248);
+  border: 1px solid #dc3545;
   height: max-content;
 }
 
+.loading {
+  text-align: center;
+  color: #6c757d;
+}
+
+.error-message {
+  text-align: center;
+  color: #dc3545;
+}
+
+.no-movies {
+  text-align: center;
+  color: #6c757d;
+  margin-top: 40px;
+}
+
 @media (max-width: 768px) {
-  .home-page {
+  .home-content {
     grid-template-columns: 1fr;
+  }
+
+  .movie-poster {
+    width: 110px;
+    height: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .movie-card {
+    flex-direction: column;
+  }
+
+  .movie-poster {
+    width: 100%;
+    height: 280px;
   }
 }
