@@ -22,9 +22,6 @@ export default function Home() {
                     setError(data.Error || 'Film not found');
                 }
             })
-            .catch(() => {
-                setError('Network error');
-            });
     }
 
     useEffect(() => {
@@ -47,9 +44,7 @@ export default function Home() {
                     
                     {!error && (
                         <div className="movies-list">
-                            {movies.length === 0 ? (
-                                <p className="no-movies">Film not found. Search...</p>
-                            ) : (
+                            {
                                 movies.map((movie) => {
                                     const isFavorite = favorites.find(fav => fav.imdbID === movie.imdbID) !== undefined;
                                     return (
@@ -69,7 +64,7 @@ export default function Home() {
                                         </div>
                                     );
                                 })
-                            )}
+                            }
                         </div>
                     )}
                 </div>

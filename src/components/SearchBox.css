@@ -26,6 +26,12 @@
 .search-button:hover {
   background-color: #5a1a9a;
 }
+.search-button:disabled {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+}
+
 @media (max-width: 576px) {
   .search-box {
     flex-direction: column;
