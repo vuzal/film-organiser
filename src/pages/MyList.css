@@ -1,70 +1,110 @@
 .my-lists-container {
-  max-width: 800px;
+  max-width: 700px;
   margin: 40px auto;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-
-.my-lists-container h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  color: #1a252f;
-}
-
 .no-lists {
   text-align: center;
-  color: #6c757d;
+  color: #000000;
 }
-
 .lists-grid {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
 }
-
 .list-folder-card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: relative;
   background: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  border: 1px solid #dee2e6;
+  padding: 20px 25px;
+  border-radius: 12px;
+  border: 1px solid #8e1eff;
 }
-
-.folder-info h3 {
-  margin: 0 0 5px 0;
-  color: #007bff;
-  font-size: 18px;
-}
-
-.folder-info p {
-  margin: 0;
-  color: #6c757d;
-  font-size: 14px;
-}
-
-.folder-actions {
-  display: flex;
-  gap: 10px;
-}
-
-.view-list-link {
-  text-decoration: none;
-  background-color: #28a745;
-  color: white;
-  padding: 8px 16px;
-  border-radius: 4px;
-  font-weight: 600;
-  font-size: 14px;
-}
-
 .delete-list-btn {
+  position: absolute;
+  top: -12px;
+  right: -12px;
   background-color: #dc3545;
   color: white;
   border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 13px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.delete-list-btn:hover {
+  background-color: #bd2130;
+}
+.list-folder-title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 16px;
+}
+.movies-in-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.movie-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.movie-row-title {
+  font-size: 16px;
   font-weight: 600;
-  font-size: 14px;
+  color: #1a1a1a;
+}
+.movie-row-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.imdb-link {
+  display: inline-block;
+  padding: 6px 14px;
+  background-color: #f5c518;
+  color: #000000;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.imdb-link:hover {
+  background-color: #e6b800;
+}
+.remove-movie-btn {
+  background: none;
+  border: none;
+  color: #dc3545;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+.remove-movie-btn:hover {
+  background-color: #f6c4c4;
+}
+.bottom-action {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.movies-btn {
+  padding: 12px 40px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #7b2fbe;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.movies-btn:hover {
+  background-color: #5a1a9a;
 }
