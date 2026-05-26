@@ -1,23 +1,8 @@
 .favorites-box {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 12px;
   width: 100%;
-}
-
-.list-name-input {
-  width: 100%;
-  padding: 10px 12px;
-  font-size: 16px;
-  border: 1px solid #ced4da;
-  border-radius: 6px;
-  outline: none;
-}
-
-.save-list-btn:disabled {
-  background-color: #ced4da;
-  color: #6c757d;
-  cursor: not-allowed;
 }
 
 .favorites-list {
@@ -26,8 +11,8 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  max-height: 400px;
+  gap: 8px;
+  max-height: 300px;
   overflow-y: auto;
 }
 
@@ -35,19 +20,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 12px;
+  padding: 8px 10px;
   background-color: #ffffff;
-  border: 1px solid #dee2e6;
+  border: 1px solid #000000;
   border-radius: 6px;
-  color: #333333;
 }
 
 .remove-btn {
   background: none;
   border: none;
   color: #dc3545;
-  font-size: 16px;
-  font-weight: bold;
   cursor: pointer;
   padding: 2px 6px;
   border-radius: 4px;
@@ -57,27 +39,53 @@
   background-color: #f6c4c4;
 }
 
+.list-name-input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 15px;
+  border: 1px solid #7b2fbe;
+  border-radius: 6px;
+  outline: none;
+}
+
 .favorites-action {
-  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .save-list-btn {
   width: 100%;
-  padding: 12px;
-  font-size: 1rem;
+  padding: 11px;
   font-weight: 600;
   color: #ffffff;
-  background-color: #007bff;
+  background-color: #7b2fbe;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.save-list-btn:hover {
+  background-color: #5a1a9a;
+}
+
+
+.save-list-btn:disabled {
+  background-color: #ced4da;
+  color: #6c757d;
+  cursor: not-allowed;
+}
+
+.view-list-btn {
+  width: 100%;
+  padding: 11px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #7b2fbe;
   border: none;
   border-radius: 6px;
   cursor: pointer;
 }
 
-.save-list-btn:hover{
-  background-color: #0056b3;
-}
-
-.save-list-btn:disabled {
-  background-color: #ced4da;
-  cursor: not-allowed;
+.view-list-btn:hover {
+  background-color: #5a1a9a;
 }
