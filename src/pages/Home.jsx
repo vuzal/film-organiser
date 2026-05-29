@@ -19,7 +19,7 @@ export default function Home() {
                     setMovies(data.Search);
                 } else {
                     setMovies([]);
-                    setError(data.Error || 'Film not found');
+                    setError('Film not found');
                 }
             })
     }
@@ -36,7 +36,7 @@ export default function Home() {
 
     return (
         <div className="home-page">
-            <SearchBox onSearch={handleSearch} />
+            <SearchBox searchQuery={handleSearch} />
             
             <div className="home-content">
                 <div className="main-content">
@@ -46,7 +46,7 @@ export default function Home() {
                         <div className="movies-list">
                             {
                                 movies.map((movie) => {
-                                    const isFavorite = favorites.find(fav => fav.imdbID === movie.imdbID) !== undefined;
+                                    const isFavorite = favorites.map(fav => fav.imdbID).includes(movie.imdbID);
                                     return (
                                         <div key={movie.imdbID} className="movie-card">
                                             <img src={movie.Poster} alt={movie.Title} className="movie-poster" />

@@ -91,21 +91,12 @@
   height: max-content;
 }
 
-.loading {
-  text-align: center;
-  color: #6c757d;
-}
 
 .error-message {
   text-align: center;
   color: #dc3545;
 }
 
-.no-movies {
-  text-align: center;
-  color: #6c757d;
-  margin-top: 40px;
-}
 
 @media (max-width: 768px) {
   .home-content {

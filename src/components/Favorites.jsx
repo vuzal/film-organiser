@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import './Favorites.css';
+
 export default function Favorites({ favorites, setFavorites }) {
   const [listName, setListName] = useState('');
   const navigate = useNavigate();

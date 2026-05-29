@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import './SearchBox.css';
 
-export default function SearchBox({ onSearch }) {
+export default function SearchBox({ searchQuery }) {
 
     const [inputValue, setInputValue] = useState('');
 
    function handleSubmit(e) {
         e.preventDefault();
         if (inputValue.trim().length < 3) return;
-        onSearch(inputValue);
+        searchQuery(inputValue);
     }
 
     return (
