@@ -32,37 +32,32 @@ export default function MyLists() {
     }
   }, []);
 
-const handleDeleteList = (id) => {
-  const { [id]: removedList, ...remainingLists } = lists;
-  localStorage.setItem('movieLists', JSON.stringify(remainingLists));
-  setLists(remainingLists);
-  const { [id]: removedMovies, ...remainingMovies } = loadedMovies;
-  setLoadedMovies(remainingMovies);
-};
-
-const handleDeleteMovie = (listId, imdbID) => {
+  const handleDeleteList = (id) => {
+    const currentLists = { ...lists };
     const currentMovies = { ...loadedMovies };
-  const targetListMovies = currentMovies[listId]; 
 
-  for (let i = 0; i < targetListMovies.length; i++) {
-    if (targetListMovies[i].imdbID === imdbID) {
-      targetListMovies.splice(i, 1); 
-      break;
+    delete currentLists[id];
+    delete currentMovies[id];
+
+    localStorage.setItem('movieLists', JSON.stringify(currentLists));
+
+    setLists(currentLists);
+    setLoadedMovies(currentMovies);
+  };
+
+  const handleDeleteMovie = (listId, imdbID) => {
+    const currentMovies = { ...loadedMovies };
+    currentMovies[listId] = currentMovies[listId].filter(movie => movie.imdbID !== imdbID);
+    setLoadedMovies(currentMovies);
+    const savedLists = JSON.parse(localStorage.getItem('movieLists')) || {};
+
+    if (savedLists[listId]) {
+      savedLists[listId].movies = savedLists[listId].movies.filter(id => id !== imdbID);
+
+      localStorage.setItem('movieLists', JSON.stringify(savedLists));
+      setLists(savedLists);
     }
-  }
-  setLoadedMovies(currentMovies); 
-
-  const savedLists = JSON.parse(localStorage.getItem('movieLists')) || {};
-  const targetIds = savedLists[listId].movies; 
-
-  for (let j = 0; j < targetIds.length; j++) {
-    if (targetIds[j] === imdbID) {
-      targetIds.splice(j, 1);
-      break;
-    }
-  }
-    localStorage.setItem('movieLists', JSON.stringify(savedLists));
-};
+  };
 
   const listKeys = Object.keys(lists);
 
